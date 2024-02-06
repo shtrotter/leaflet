@@ -5,5 +5,5 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 var marker = L.marker([45.261410247202846, -122.69310372195511]).addTo(map)
-		.bindPopup('Canby, OR <br> Northwest Fishing Basecamp')
+		.bindPopup('<b>Canby, OR</b> <br> Fishing Basecamp')
 		.openPopup();	
