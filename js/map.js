@@ -54,6 +54,6 @@ var marker_CoquilleRiver = L.marker([43.10077204506709, -124.39533081054688]).ad
   .bindPopup('<b>Coquille River (mouth), Oregon</b> <br> Clams: softshells');
 
 // Marker for Alsea River (mouth)
-var marker_AlseaRiver_Steelhead = L.marker([43.10077204506709, -124.39533081054688]).addTo(map)
-  .bindPopup('<b>Coquille River (mouth), Oregon</b> <br> Steelhead peak season: Jan, Feb, Mar')
+var marker_AlseaRiver_Steelhead = L.marker([44.371168736745034, -123.80699377300026]).addTo(map)
+  .bindPopup('<b>Alsea River, Oregon</b> <br> Steelhead peak season: Jan, Feb, Mar')
   .openPopup();
