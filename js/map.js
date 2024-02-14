@@ -4,9 +4,19 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-L.esri.tiledMapLayer({
+// Add the AGOL layer, but don't add it to the map initially
+var agolLayer = L.esri.tiledMapLayer({
 	url: 'https://services8.arcgis.com/8PAo5HGmvRMlF2eU/arcgis/rest/services/Fish_Passage_Barriers_2020/FeatureServer'
-}).addTo(map);
+});
+
+// Listen for checkbox changes
+document.getElementById('agol-layer-toggle').addEventListener('change', function() {
+  if (this.checked) {
+    map.addLayer(agolLayer);
+  } else {
+    map.removeLayer(agolLayer);
+  }
+});
 
 var marker = L.marker([45.261410247202846, -122.69310372195511]).addTo(map)
 		.bindPopup('<b>Canby, OR</b> <br> Fishing Basecamp')
