@@ -4,6 +4,10 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
+L.esri.tiledMapLayer({
+	url: 'https://services8.arcgis.com/8PAo5HGmvRMlF2eU/arcgis/rest/services/Fish_Passage_Barriers_2020/FeatureServer'
+}).addTo(map);
+
 var marker = L.marker([45.261410247202846, -122.69310372195511]).addTo(map)
 		.bindPopup('<b>Canby, OR</b> <br> Fishing Basecamp')
 		.openPopup();
